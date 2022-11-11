@@ -11,4 +11,8 @@ const ButtonContainer = styled.button`
   font-size: var(--fs-300);
 `
 
-export { ButtonContainer }
+const ButtonContainerLight = styled(ButtonContainer)`
+  filter: drop-shadow(1px 1px 10px var(--clr-blue-300));
+`
+
+export { ButtonContainer, ButtonContainerLight }

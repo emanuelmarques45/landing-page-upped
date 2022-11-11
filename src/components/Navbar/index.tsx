@@ -1,5 +1,5 @@
 import { Button } from '..'
-import logo from '../../assets/logo.png'
+import { logo } from '../../assets'
 import { NavbarContainer } from './style'
 
 const Navbar = () => {

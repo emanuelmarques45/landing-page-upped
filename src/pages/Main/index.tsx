@@ -1,12 +1,14 @@
-import { Navbar } from '../../components'
+import { Navbar, Section1, Section2 } from '../../components'
 import { MainContainer } from './style'
-import banner from '../../assets/banner.png'
 
 const Main = () => {
   return (
     <>
       <Navbar />
-      <MainContainer></MainContainer>
+      <MainContainer>
+        <Section1 />
+        <Section2 />
+      </MainContainer>
     </>
   )
 }

@@ -17,6 +17,7 @@ const GlobalStyle = createGlobalStyle`
     /* --fw-semi-bold: 500; */
     --fw-bold: 700;
 
+    --fs-200: 0.8rem;
     --fs-300: 1rem;
     --fs-400: 1.125rem;
     --fs-500: 1.25rem;
