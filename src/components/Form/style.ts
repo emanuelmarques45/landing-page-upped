@@ -1,10 +1,11 @@
 import styled from 'styled-components'
+import { devices } from '../../styles/devices'
 
 const FormContainer = styled.div`
   display: flex;
   align-items: flex-start;
   flex-direction: column;
-  width: min(38rem, 95vw);
+  width: min(38rem, 90vw);
   font-size: var(--fs-500);
 
   img {
@@ -39,12 +40,23 @@ const FormStyled = styled.form`
 
   button {
     align-self: center;
+    font-size: var(--fs-300);
   }
 
   p {
     text-transform: uppercase;
     font-size: var(--fs-300);
+  }
+
+  p:first-child {
     white-space: nowrap;
+  }
+
+  @media (${devices.tablet}) {
+    &,
+    button {
+      width: 100%;
+    }
   }
 `
 
@@ -56,6 +68,7 @@ const InputContainer = styled.div`
     padding: 0.6rem;
     width: 100%;
     background-color: var(--clr-off-white);
+    border-radius: 5px;
   }
 
   input:focus + label,

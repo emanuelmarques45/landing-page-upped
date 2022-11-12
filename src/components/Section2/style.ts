@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { devices } from '../../styles/devices'
 
 const SectionContainer = styled.section`
   background: linear-gradient(
@@ -7,7 +8,7 @@ const SectionContainer = styled.section`
       rgba(19, 154, 228, 0) 100%
     ),
     rgb(0, 0, 0);
-  padding: 2rem;
+  padding: min(2rem, 5vw);
 
   h2 {
     color: var(--clr-white);
@@ -32,16 +33,22 @@ const SectionContainer = styled.section`
     align-items: center;
     flex-direction: column;
     gap: 1rem;
-    border: 3px solid var(--clr-blue-300);
+    border: 4px solid var(--clr-blue-300);
     border-radius: 2rem;
-    width: min(18rem, 90vw);
-    padding: 1.2rem;
+    width: 18rem;
+    padding: 1.5rem;
   }
 
   p {
     color: var(--clr-white);
     text-transform: uppercase;
     text-align: center;
+  }
+
+  @media (${devices.mobileL}) {
+    li {
+      width: 100%;
+    }
   }
 `
 

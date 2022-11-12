@@ -9,10 +9,11 @@ const SectionContainer = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  padding: 0 4rem 2rem;
+  align-items: flex-start;
+  padding: 0 min(4rem, 5vw) 2rem;
 
   @media (${devices.tablet}) {
-    justify-content: center;
+    align-items: center;
   }
 `
 export { SectionContainer }

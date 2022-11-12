@@ -1,18 +1,26 @@
 import styled from 'styled-components'
+import { devices } from '../../styles/devices'
 
 const ButtonContainer = styled.button`
   background-color: var(--clr-blue-300);
   color: var(--clr-white);
   text-transform: uppercase;
   font-weight: var(--fw-bold);
-  padding: 0.8rem 2.5rem;
+  padding: 1rem min(3rem, 5vw);
   border-radius: 2px;
   border: 0;
   font-size: var(--fs-300);
   transition: scale 0.4s;
 
-  &:hover {
+  &:active {
     scale: 1.1;
+  }
+
+  @media (${devices.tabletS}) {
+    font-size: var(--fs-200);
+  }
+  @media (${devices.mobileS}) {
+    font-size: var(--fs-100);
   }
 `
 

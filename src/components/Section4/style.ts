@@ -1,13 +1,11 @@
 import styled from 'styled-components'
+import { devices } from '../../styles/devices'
 
 const SectionContainer = styled.section`
-  display: flex;
-  flex-direction: column;
   position: relative;
   min-height: 90vh;
   background: var(--clr-black-400);
-  gap: 1rem;
-  padding: 3rem;
+  padding: 1.5rem 3rem;
 
   img {
     position: absolute;
@@ -16,10 +14,24 @@ const SectionContainer = styled.section`
     max-height: 90vh;
   }
 
+  @media (${devices.laptop}) {
+    figure {
+      display: none;
+    }
+  }
+`
+
+const TextContainer = styled.div`
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 1rem;
+
   h2 {
     color: var(--clr-white);
     font-weight: var(--fw-bold);
     font-size: var(--fs-900);
+    text-align: center;
   }
 
   p {
@@ -27,9 +39,15 @@ const SectionContainer = styled.section`
     color: var(--clr-white);
     font-size: var(--fs-500);
     z-index: 1;
-    width: min(40rem);
+    width: 50%;
     font-weight: var(--fw-bold);
+  }
+
+  @media (${devices.laptop}) {
+    p {
+      width: 80vw;
+    }
   }
 `
 
-export { SectionContainer }
+export { SectionContainer, TextContainer }

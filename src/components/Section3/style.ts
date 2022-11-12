@@ -7,7 +7,7 @@ const SectionContainer = styled.section`
   justify-content: flex-start;
   flex-direction: column;
   min-height: 90vh;
-  background: url(${bcgSection3});
+  background: url(${bcgSection3}) center/cover no-repeat;
 
   h2 {
     font-size: var(--fs-700);
