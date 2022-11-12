@@ -23,6 +23,9 @@ node_modules
 *.sln
 *.sw?
 
+*.json
+!package.json
+!package-lock.json
 # vite.config.ts
 # vite-env.d.ts
 .vercel
