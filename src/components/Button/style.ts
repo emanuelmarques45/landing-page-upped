@@ -12,10 +12,19 @@ const ButtonContainer = styled.button`
   font-size: var(--fs-300);
   transition: scale 0.4s;
 
-  &:active {
+  &:hover {
     scale: 1.1;
   }
 
+  @media (${devices.tablet}) {
+    &:hover {
+      scale: 1;
+    }
+
+    &:active {
+      scale: 1.1;
+    }
+  }
   @media (${devices.tabletS}) {
     font-size: var(--fs-200);
   }

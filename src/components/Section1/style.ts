@@ -14,6 +14,8 @@ const SectionContainer = styled.section`
 
   @media (${devices.tablet}) {
     align-items: center;
+    background-position: 65%;
+    background-attachment: fixed;
   }
 `
 export { SectionContainer }
