@@ -25,5 +25,5 @@ dist-ssr
 
 *.json
 !package.json
-vite.config.ts
-vite-env.d.ts
+# vite.config.ts
+# vite-env.d.ts
