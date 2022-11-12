@@ -5,6 +5,7 @@ const FormContainer = styled.div`
   align-items: flex-start;
   flex-direction: column;
   width: min(38rem, 95vw);
+  font-size: var(--fs-500);
 
   img {
     position: relative;
@@ -36,10 +37,20 @@ const FormStyled = styled.form`
   flex-direction: column;
   gap: 1.8rem;
 
-  .input-container {
-    width: 100%;
-    position: relative;
+  button {
+    align-self: center;
   }
+
+  p {
+    text-transform: uppercase;
+    font-size: var(--fs-300);
+    white-space: nowrap;
+  }
+`
+
+const InputContainer = styled.div`
+  width: 100%;
+  position: relative;
 
   input {
     padding: 0.6rem;
@@ -70,10 +81,6 @@ const FormStyled = styled.form`
     font-style: italic;
     font: italic var(--fw-bold) var(--fs-200) 'Inter';
   }
-
-  button {
-    align-self: center;
-  }
 `
 
-export { FormContainer, FormStyled }
+export { FormContainer, FormStyled, InputContainer }

@@ -7,7 +7,17 @@ const SectionContainer = styled.section`
       rgba(19, 154, 228, 0) 100%
     ),
     rgb(0, 0, 0);
-  padding: 4rem;
+  padding: 2rem;
+
+  h2 {
+    color: var(--clr-white);
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-600);
+    margin-bottom: 2rem;
+  }
+
   ul {
     display: flex;
     justify-content: center;

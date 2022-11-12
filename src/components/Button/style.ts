@@ -9,6 +9,11 @@ const ButtonContainer = styled.button`
   border-radius: 2px;
   border: 0;
   font-size: var(--fs-300);
+  transition: scale 0.4s;
+
+  &:hover {
+    scale: 1.1;
+  }
 `
 
 const ButtonContainerLight = styled(ButtonContainer)`

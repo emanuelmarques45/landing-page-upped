@@ -1,4 +1,10 @@
-import { Navbar, Section1, Section2 } from '../../components'
+import {
+  Navbar,
+  Section1,
+  Section2,
+  Section3,
+  Section4
+} from '../../components'
 import { MainContainer } from './style'
 
 const Main = () => {
@@ -8,6 +14,8 @@ const Main = () => {
       <MainContainer>
         <Section1 />
         <Section2 />
+        <Section3 />
+        <Section4 />
       </MainContainer>
     </>
   )

@@ -7,7 +7,12 @@ const Navbar = () => {
     <>
       <NavbarContainer>
         <nav>
-          <img src={logo} alt="Upped Logo" />
+          <figure>
+            <img
+              src={logo}
+              alt="Upped Logo"
+            />
+          </figure>
           <Button>quero minha vaga agora</Button>
         </nav>
       </NavbarContainer>

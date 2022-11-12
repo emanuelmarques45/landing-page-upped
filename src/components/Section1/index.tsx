@@ -1,5 +1,5 @@
 import { SectionContainer } from './style'
-import { Form } from '../Form'
+import { Form } from '../'
 
 const Section1 = () => {
   return (

@@ -1,12 +1,17 @@
-import { Button } from '../Button'
-import { FormContainer, FormStyled } from './style'
+import { Button } from '../'
+import { FormContainer, FormStyled, InputContainer } from './style'
 import { logoDesign } from '../../assets'
 
 const Form = () => {
   return (
     <>
       <FormContainer>
-        <img src={logoDesign} alt="Design Logo" />
+        <figure>
+          <img
+            src={logoDesign}
+            alt="Design Logo"
+          />
+        </figure>
         <h2>
           <span>de 21 a 23 de novembro</span> | 100% online e gratuito
         </h2>
@@ -16,17 +21,26 @@ const Form = () => {
           sem nenhuma experiência.
         </p>
         <FormStyled>
-          <div className="input-container">
-            <input type="text" id="name" required />
+          <InputContainer>
+            <input
+              type="text"
+              id="name"
+              required
+            />
             <label htmlFor="name">Nome</label>
             <span>Obrigatório*</span>
-          </div>
-          <div className="input-container">
-            <input type="email" id="email" required />
+          </InputContainer>
+          <InputContainer>
+            <input
+              type="email"
+              id="email"
+              required
+            />
             <label htmlFor="email">Email</label>
             <span>Obrigatório*</span>
-          </div>
+          </InputContainer>
           <Button light>quero minha vaga agora</Button>
+          <p>inscreva-se grátis e ganhe um pack de design no seu e-mail*</p>
         </FormStyled>
       </FormContainer>
     </>

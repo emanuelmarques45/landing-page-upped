@@ -24,6 +24,7 @@ const GlobalStyle = createGlobalStyle`
     --fs-600: 1.50rem;
     --fs-700: 1.75rem;
     --fs-800: 2rem;
+    --fs-900: 2.6rem;
 
     --td-fast: 300ms;
     --td-medium: 800ms;
@@ -41,12 +42,12 @@ const GlobalStyle = createGlobalStyle`
       text-decoration: none;
       list-style-type: none;
       outline: none;
-      font-size: var(--fs-400);
       font-family: var(--ff-primary);
   }
 
   img {
     max-width: 100%;
+    display: block;
   }
 
   button {
