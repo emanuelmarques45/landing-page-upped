@@ -18,7 +18,7 @@ const images = [
 ]
 
 const CCarousel = () => {
-  const carousel = useRef()
+  const carousel = document.querySelector('.carousel')
   const [width, setWidth] = useState(0)
 
   useEffect(() => {
@@ -28,7 +28,7 @@ const CCarousel = () => {
 
   return (
     <>
-      <CarouselContainer ref={carousel}>
+      <CarouselContainer>
         <motion.div
           className="inner"
           whileTap={{ cursor: 'grab' }}
