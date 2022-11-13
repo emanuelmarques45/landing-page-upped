@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components'
+import { devices } from './devices'
 
 const GlobalStyle = createGlobalStyle`
   :root {
@@ -53,6 +54,14 @@ const GlobalStyle = createGlobalStyle`
 
   button {
     cursor: pointer;
+  }
+
+  @media (${devices.laptopL}) {
+    :root {
+      --fs-100: var(--fs-200);
+      --fs-400: var(--fs-500);
+      --fs-500: var(--fs-600);
+    }
   }
 `
 export { GlobalStyle }

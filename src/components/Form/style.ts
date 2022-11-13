@@ -5,7 +5,7 @@ const FormContainer = styled.div`
   display: flex;
   align-items: flex-start;
   flex-direction: column;
-  width: min(38rem, 90vw);
+  max-width: 45vw;
   font-size: var(--fs-500);
 
   img {
@@ -27,6 +27,10 @@ const FormContainer = styled.div`
   span {
     color: var(--clr-blue-300);
     font-weight: var(--fw-bold);
+  }
+
+  @media (${devices.tablet}) {
+    max-width: 90vw;
   }
 `
 
