@@ -1,9 +1,9 @@
 import styled from 'styled-components'
-import { banner } from '../../assets'
+import { banner, bannerMobile } from '../../assets'
 import { devices } from '../../styles/devices'
 
 const SectionContainer = styled.section`
-  min-height: calc(100vh - 100px);
+  min-height: calc(90vh - 100px);
   width: 100vw;
   background: url(${banner}) center/cover no-repeat;
   display: flex;
@@ -14,8 +14,8 @@ const SectionContainer = styled.section`
 
   @media (${devices.tablet}) {
     align-items: center;
-    background-position: 65%;
-    background-attachment: fixed;
+    background: url(${bannerMobile}) top right / cover no-repeat;
+    padding-top: 12rem;
   }
 `
 export { SectionContainer }

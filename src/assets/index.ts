@@ -1,4 +1,5 @@
 import banner from './images/banner.png'
+import bannerMobile from './images/banner-mobile.png'
 import iconBag from './images/icon-bag.png'
 import iconRun from './images/icon-run.png'
 import iconStats from './images/icon-stats.png'
@@ -14,6 +15,7 @@ import bcgSection4 from './images/bcg-section4.png'
 
 export {
   banner,
+  bannerMobile,
   iconBag,
   iconRun,
   iconStats,

@@ -1,22 +1,16 @@
-import { MouseEvent } from 'react'
+import { ButtonHTMLAttributes } from 'react'
 import { ButtonContainer, ButtonContainerLight } from './style'
 
-interface ButtonProps {
+interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   children: string
   light?: boolean
 }
 
 const Button = (props: ButtonProps) => {
-  const handleClick = (ev: MouseEvent<HTMLButtonElement>) => {
-    // ev.preventDefault()
-  }
-
   return props.light ? (
-    <ButtonContainerLight onClick={handleClick}>
-      {props.children}
-    </ButtonContainerLight>
+    <ButtonContainerLight>{props.children}</ButtonContainerLight>
   ) : (
-    <ButtonContainer onClick={handleClick}>{props.children}</ButtonContainer>
+    <ButtonContainer>{props.children}</ButtonContainer>
   )
 }
 

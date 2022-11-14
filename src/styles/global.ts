@@ -9,6 +9,12 @@ const GlobalStyle = createGlobalStyle`
     --clr-white: rgb(255, 255, 255);
     --clr-off-white: rgb(217, 217, 217);
     --clr-blue-300: rgb(19, 154, 228);
+    --bg-linear: linear-gradient(
+      317.07deg,
+      rgba(19, 154, 228, 0.2) 23.09%,
+      rgba(0, 0, 0, 0) 88.66%
+    ),
+    #000000;
 
     --ff-primary: "Inter", sans-serif;
     --ff-secondary: "Montserrat Alternates", sans-serif;

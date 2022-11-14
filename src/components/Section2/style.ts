@@ -3,11 +3,11 @@ import { devices } from '../../styles/devices'
 
 const SectionContainer = styled.section`
   background: linear-gradient(
-      180deg,
-      rgba(19, 154, 228, 0.1) 0%,
-      rgba(19, 154, 228, 0) 100%
-    ),
-    rgb(0, 0, 0);
+        rgba(19, 154, 228, 0.1) 0%,
+        rgba(19, 154, 228, 0) 100%
+      )
+      repeat scroll 0% 0%,
+    rgb(0, 0, 0) none repeat scroll 0% 0%;
   padding: min(2rem, 5vw);
 
   h2 {

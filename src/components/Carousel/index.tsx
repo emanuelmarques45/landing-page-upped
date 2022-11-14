@@ -17,7 +17,7 @@ const images = [
   imgCarousel5
 ]
 
-const CCarousel = () => {
+const Carousel = () => {
   const carousel = useRef()
   const [width, setWidth] = useState(0)
 
@@ -55,4 +55,4 @@ const CCarousel = () => {
   )
 }
 
-export { CCarousel }
+export { Carousel }

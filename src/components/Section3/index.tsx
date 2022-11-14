@@ -6,8 +6,9 @@ const Section3 = () => {
     <>
       <SectionContainer>
         <h2>
-          <span>Está vendo essas artes aqui?</span> Eu produzi todas em menos de{' '}
-          <span>20 minutos</span> e vou te ensinar tudo nesse evento ao vivo.
+          <strong>Está vendo essas artes aqui?</strong> Eu produzi todas em
+          menos de <em>20 minutos</em> e vou te ensinar tudo nesse evento ao
+          vivo.
         </h2>
         <Carousel />
       </SectionContainer>

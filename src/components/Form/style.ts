@@ -24,7 +24,7 @@ const FormContainer = styled.div`
     color: var(--clr-white);
   }
 
-  span {
+  strong {
     color: var(--clr-blue-300);
     font-weight: var(--fw-bold);
   }
@@ -50,9 +50,6 @@ const FormStyled = styled.form`
   p {
     text-transform: uppercase;
     font-size: var(--fs-300);
-  }
-
-  p:first-child {
     white-space: nowrap;
   }
 
@@ -60,6 +57,10 @@ const FormStyled = styled.form`
     &,
     button {
       width: 100%;
+    }
+
+    p {
+      white-space: normal;
     }
   }
 `
@@ -91,7 +92,7 @@ const InputContainer = styled.div`
     transition-duration: 0.4s;
   }
 
-  span {
+  strong {
     position: absolute;
     right: 0;
     top: -1rem;
