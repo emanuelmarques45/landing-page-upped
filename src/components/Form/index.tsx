@@ -22,8 +22,8 @@ const Form = () => {
           'Content-Type': 'application/json'
         },
         body: JSON.stringify({
-          name: name.value,
-          email: email.value,
+          name: name?.value,
+          email: email?.value,
           phone: ' ',
           custom_fields: {
             redirect_url: 'https://chat.whatsapp.com/CI8ed1lVaadA7vhc3iXG6y'
