@@ -2,7 +2,11 @@
 // import Button from '@mui/material/Button'
 // import Typography from '@mui/material/Typography'
 // import Modal from '@mui/material/Modal'
-// import { useState } from 'react'
+import React from 'react'
+
+const MyModal = () => {
+  return <div>Modal</div>
+}
 
 // // const style = {
 // //   position: 'absolute' as 'absolute',
@@ -50,4 +54,4 @@
 //   )
 // }
 
-// export { MyModal }
+export { MyModal }
