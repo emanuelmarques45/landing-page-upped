@@ -22,6 +22,7 @@ const Form = () => {
           'Content-Type': 'application/json'
         },
         body: JSON.stringify({
+          // @ts-ignore
           name: name?.value,
           email: email?.value,
           phone: ' ',
@@ -43,7 +44,8 @@ const Form = () => {
         }
         notifySuccess()
         setTimeout(() => {
-          window.location = 'https://chat.whatsapp.com/CI8ed1lVaadA7vhc3iXG6y'
+          const win: Window = window
+          win.location = 'https://chat.whatsapp.com/CI8ed1lVaadA7vhc3iXG6y'
         }, 2000)
       })
       .catch(err => console.log('erro'))
