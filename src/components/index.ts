@@ -6,7 +6,8 @@ import { Section2 } from './Section2'
 import { Section3 } from './Section3'
 import { Section4 } from './Section4'
 import { Carousel } from './Carousel'
-import { MyModal as Modal } from './Modal'
+import { Modal } from './Modal'
+import { Backdrop } from './Backdrop'
 
 export {
   Navbar,
@@ -17,5 +18,6 @@ export {
   Section3,
   Section4,
   Carousel,
-  Modal
+  Modal,
+  Backdrop
 }

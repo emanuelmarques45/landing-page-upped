@@ -26,7 +26,7 @@ const ButtonContainer = styled.button`
     }
   }
   @media (${devices.tabletS}) {
-    font-size: var(--fs-200);
+    font-size: var(--fs-300);
   }
   @media (${devices.mobileS}) {
     font-size: var(--fs-100);

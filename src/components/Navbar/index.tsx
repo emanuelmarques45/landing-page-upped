@@ -3,6 +3,11 @@ import { logo } from '../../assets'
 import { NavbarContainer } from './style'
 
 const Navbar = () => {
+  const handleClick = () => {
+    const win: Window = window
+    win.scrollTo(0, 0)
+  }
+
   return (
     <>
       <NavbarContainer>
@@ -13,7 +18,7 @@ const Navbar = () => {
               alt="Upped Logo"
             />
           </figure>
-          <Button>quero minha vaga agora</Button>
+          <Button onClick={handleClick}>quero minha vaga agora</Button>
         </nav>
       </NavbarContainer>
     </>

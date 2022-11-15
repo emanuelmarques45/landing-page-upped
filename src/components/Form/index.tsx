@@ -1,59 +1,64 @@
-import { Button } from '../'
+import { Button, Modal } from '../'
 import { FormContainer, FormStyled, InputContainer } from './style'
 import { logoDesign } from '../../assets'
-import { FormEvent } from 'react'
+import { FormEvent, useEffect, useRef, useState } from 'react'
 import { toast, ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
+import { AnimatePresence, usePresence } from 'framer-motion'
+import { sendData } from '../../utils/sellflux'
 
 const Form = () => {
+  const [name, setName] = useState<string | null>(null)
+  const [email, setEmail] = useState<string | null>(null)
+  const [phone, setPhone] = useState<string | null>(null)
+
+  useEffect(() => {
+    setName(name)
+    setEmail(email)
+    setPhone(phone)
+  }, [name, email, phone])
+
   const handleSubmit = async (ev: FormEvent<HTMLFormElement>) => {
     ev.preventDefault()
-    const { name, email } = ev.currentTarget
     const notifyError = () =>
       toast.error('Verifique as informações enviadas e tente novamente!')
     const notifySuccess = () =>
       toast.success('Suas informações foram enviadas com sucesso!')
-    await fetch(
-      'https://webhook.sellflux.app/webhook/sellfront/lead/e05c7ba4e087beea9410929698dc41a6?redirect_url=https%3A%2F%2Fchat.whatsapp.com%2FCI8ed1lVaadA7vhc3iXG6y',
-      {
-        method: 'POST',
-        headers: {
-          Accept: 'application/json',
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-          // @ts-ignore
-          name: name?.value,
-          email: email?.value,
-          phone: ' ',
-          custom_fields: {
-            redirect_url: 'https://chat.whatsapp.com/CI8ed1lVaadA7vhc3iXG6y'
-          },
-          redirect_url: 'https://chat.whatsapp.com/CI8ed1lVaadA7vhc3iXG6y',
-          origin: 'sellfront',
-          code: 'e05c7ba4e087beea9410929698dc41a6'
-        })
-      }
-    )
-      .then(res => {
-        console.log('sucesso')
 
-        if (res.status === 500) {
-          notifyError()
-          return
-        }
+    const data = {
+      name: name,
+      email: email,
+      phone: phone
+    }
+    sendData(data)
+      .then(res => {
         notifySuccess()
         setTimeout(() => {
-          const win: Window = window
-          win.location = 'https://chat.whatsapp.com/CI8ed1lVaadA7vhc3iXG6y'
-        }, 2000)
+          openModal()
+        }, 1500)
       })
-      .catch(err => console.log('erro'))
+      .catch(err => console.log(err))
   }
+
+  const [modalOpen, setModalOpen] = useState(false)
+  const openModal = () => setModalOpen(true)
+  const closeModal = () => setModalOpen(false)
 
   return (
     <>
       <FormContainer>
+        <AnimatePresence
+          initial={false}
+          mode="wait"
+          onExitComplete={() => null}
+        >
+          {modalOpen && (
+            <Modal
+              modalOpen={modalOpen}
+              closeModal={closeModal}
+            />
+          )}
+        </AnimatePresence>
         <figure>
           <img
             src={logoDesign}
@@ -75,6 +80,8 @@ const Form = () => {
               id="name"
               name="name"
               required
+              onKeyDown={ev => setName(ev.currentTarget.value)}
+              onChange={ev => setName(ev.currentTarget.value)}
             />
             <label htmlFor="name">Nome</label>
             <strong>Obrigatório*</strong>
@@ -85,8 +92,22 @@ const Form = () => {
               id="email"
               name="email"
               required
+              onKeyDown={ev => setEmail(ev.currentTarget.value)}
+              onChange={ev => setEmail(ev.currentTarget.value)}
             />
             <label htmlFor="email">Email</label>
+            <strong>Obrigatório*</strong>
+          </InputContainer>
+          <InputContainer>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              required
+              onKeyDown={ev => setPhone(ev.currentTarget.value)}
+              onChange={ev => setPhone(ev.currentTarget.value)}
+            />
+            <label htmlFor="phone">Celular</label>
             <strong>Obrigatório*</strong>
           </InputContainer>
           <Button light>quero minha vaga agora</Button>

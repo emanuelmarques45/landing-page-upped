@@ -7,8 +7,9 @@ const GlobalStyle = createGlobalStyle`
     --clr-black-300: rgb(17, 17, 17);
     --clr-black-200: rgb(22, 22, 22);
     --clr-white: rgb(255, 255, 255);
-    --clr-off-white: rgb(217, 217, 217);
+    --clr-off-white: rgb(250, 250, 255);
     --clr-blue-300: rgb(19, 154, 228);
+    --clr-blue-green: rgb(157, 217, 210);
     --bg-linear: linear-gradient(
       317.07deg,
       rgba(19, 154, 228, 0.2) 23.09%,
@@ -51,6 +52,10 @@ const GlobalStyle = createGlobalStyle`
       list-style-type: none;
       outline: none;
       font-family: var(--ff-primary);
+  }
+
+  html {
+    scroll-behavior: smooth;
   }
 
   img {
