@@ -35,9 +35,23 @@ const dropIn = {
 
 const Modal = ({ closeModal }: any) => {
   const handleClick = (ev: MouseEvent<HTMLButtonElement>) => {
-    console.log(ev)
+    const links = []
+
+    links.push(
+      'https://chat.whatsapp.com/GvygX6cZgcs3xn6Y5DNCgF',
+      'https://chat.whatsapp.com/KDuXCXMoZqi7W6AC5f8T54',
+      'https://chat.whatsapp.com/KfBZtitXEuwAbvFydSQctN',
+      'https://chat.whatsapp.com/CzNbrOxz1El1LzwzSA4Co8',
+      'https://chat.whatsapp.com/FO6ya1zqzq45CwikHvG6ss',
+      'https://chat.whatsapp.com/GTS5d7xTGVPBudujLdoeoQ',
+      'https://chat.whatsapp.com/HjfbzWbkzJt2YZjbhgnjvC',
+      'https://chat.whatsapp.com/Bs4c4l6yr8h9at58dhLWxk'
+    )
+
+    const random = Math.floor(Math.random() * links.length)
+
     const win: Window = window
-    win.location = 'https://chat.whatsapp.com/CI8ed1lVaadA7vhc3iXG6y'
+    win.location = links[random]
   }
 
   return (
