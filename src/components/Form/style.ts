@@ -29,20 +29,12 @@ const FormContainer = styled.div`
     font-weight: var(--fw-bold);
   }
 
-  @media screen and (-webkit-min-device-pixel-ratio: 1),
-    and (min-device-width: 1000px),
-    and (max-device-width: 1600px) {
-    @media (${devices.laptop}) and (min-resolution: 192dpi) {
-      max-width: 70vw;
-    }
-    @media (${devices.tablet}) and (min-resolution: 192dpi) {
-      max-width: 70vw;
-    }
+  @media (${devices.laptop}) {
+    max-width: 70vw;
   }
-
-  /* @media (${devices.tablet}) {
+  @media (${devices.tablet}) {
     max-width: 90vw;
-  } */
+  }
 `
 
 const FormStyled = styled.form`
