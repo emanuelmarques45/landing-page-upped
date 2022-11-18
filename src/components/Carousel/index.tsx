@@ -20,6 +20,7 @@ const images = [
 const Carousel = () => {
   const carousel = useRef()
   const [width, setWidth] = useState(0)
+  // const [imgOpen, setImgOpen] = useState(false)
 
   useEffect(() => {
     //@ts-ignore
@@ -41,6 +42,12 @@ const Carousel = () => {
               <motion.div
                 className="item"
                 key={idx}
+                // onClick={setImgOpen(!imgOpen)}imgOpen
+                // ? <motion.div layoutId='grow'></motion.div>
+                // :
+                // }
+                /* {imgOpen ? <motion.div layoutId="grow"></motion.div> : null}{' '}
+                 */
               >
                 <img
                   src={image}
