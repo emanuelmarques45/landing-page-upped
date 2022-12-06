@@ -2,4 +2,4 @@
 
 Landing page made for Upped Design
 
-[uppeddesign.com/](uppeddesign.com/)
+![uppeddesign.com/](uppeddesign.com/)
