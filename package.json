@@ -17,7 +17,10 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
 <<<<<<< HEAD
+<<<<<<< HEAD
     "react-responsive-carousel": "^3.2.23",
+=======
+>>>>>>> ffeb0e6d3bc85b6b90e5537736931a4bb7393092
 =======
 >>>>>>> ffeb0e6d3bc85b6b90e5537736931a4bb7393092
     "react-toastify": "^9.1.1",
