@@ -25,7 +25,7 @@ node_modules
 
 # *.json
 # !package.json
-package-lock.json
+# package-lock.json
 # vite.config.ts
 # vite-env.d.ts
 .vercel
