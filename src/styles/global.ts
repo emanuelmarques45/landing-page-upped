@@ -57,6 +57,10 @@ const GlobalStyle = createGlobalStyle`
   html {
     scroll-behavior: smooth;
   }
+  
+  body {
+  	overflow-x: hidden;
+  }
 
   img {
     max-width: 100%;
