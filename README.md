@@ -2,4 +2,5 @@
 
 Landing page made for Upped Design
 
-<a href="https://uppeddesign.com/" target="_blank">uppeddesign.com</a>
+<a href="https://landing-page-upped.vercel.app/" target="_blank">uppeddesign.com</a>
+
